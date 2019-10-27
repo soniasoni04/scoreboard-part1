@@ -7,9 +7,7 @@ export default class Scoreboard extends Component {
       <div>
         <h1>Scoreboard</h1>
         <ul>
-          <Player name="Kelley" />
-          <Player name="David" />
-          <Player name="Sonia" />
+          <Player  />
         </ul>
       </div>
     );
