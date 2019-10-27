@@ -1,31 +1,22 @@
 import React, { Component } from "react";
 
 export default class Player extends Component {
-    state = {
-        players: [
-          { id: 1, name: "Kelley", score: 11 },
-          { id: 2, name: "David", score: 14 },
-          { id: 3, name: "Rein", score: 4 }
-        ]
-      };
-
   render() {
-      const {players} = this.state
-      console.log(players)
+    console.log("player details : ", this.props)
 
     return (
-      <ol>
-      {
-          players.map(player => {
-            return <li>
-                        <p> <b> Player Id </b>: {player.id}</p>
-                        <p> <b> Player Name</b> : {player.name}</p>
-                        <p> <b>Player Score</b> : {player.score}</p>
-                    </li>
+        <div>
+        <p>
+        <li>
+        Player_ID : {this.props.id}, 
+        Player_Name: {this.props.name}, 
+        Player_Score: {this.props.score}
+        </li>
+            
+        </p>
+        </div>
+    )
+      
 
-          })
-      }
-      </ol>
-    );
   }
 }
