@@ -9,7 +9,7 @@ export default class Scoreboard extends Component {
         <ul>
           <Player name="Kelley" />
           <Player name="David" />
-          <Player name="Rein" />
+          <Player name="Sonia" />
         </ul>
       </div>
     );
