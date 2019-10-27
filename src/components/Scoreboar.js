@@ -6,8 +6,8 @@ export default class Scoreboard extends Component {
   state = {
     players: [
       { id: 1, name: "Kelley", score: 11 },
-      { id: 2, name: "David", score: 14 },
-      { id: 3, name: "Rein", score: 40 }
+      { id: 2, name: "David", score: 10 },
+      { id: 3, name: "Rein", score: 12 }
     ]
   }; 
 
@@ -17,9 +17,22 @@ export default class Scoreboard extends Component {
         id={player.id}
         name={player.name}
         score={player.score}
+        incrementScore={this.incrementScore}
       />
     )
   }
+
+  incrementScore=(id)=>{
+    this.setState({
+      players: this.state.players.map(player => (
+        player.id === id
+          ? { ...player, score: player.score + 1 }
+          : player
+      ))
+    });
+  }
+
+  
 
   render() {
     return (
